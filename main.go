@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"auth-service/initializers"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -12,6 +13,8 @@ func init() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+
+	initializers.Connect() 
 }
 
 func main() {
