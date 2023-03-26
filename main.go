@@ -1,9 +1,9 @@
 package main
 
 import (
-	Controllers "auth-service/controllers"
+    "auth-service/controllers" 
 	"auth-service/initializers"
-
+ 
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,8 +15,10 @@ func init() {
 
 func main() {
 	r := gin.Default()
-	r.POST("/users", Controllers.CreateUsers)
-	r.GET("/users", Controllers.GetUsers)
+
+	r.POST("/register", controllers.RegisterUser)
+	r.POST("/login", controllers.LoginUser)
 
 	r.Run()
+
 }

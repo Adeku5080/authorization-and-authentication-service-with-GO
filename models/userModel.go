@@ -6,5 +6,6 @@ type User struct {
 	gorm.Model
 	UserName string
 	Password string
+	admin bool
 
 }
